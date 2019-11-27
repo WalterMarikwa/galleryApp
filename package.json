@@ -1,24 +1,24 @@
 {
   "name": "gallery",
   "version": "1.0.0",
-  "description": "My gallery app",
-  "main": "server.js",
+  "description": "",
+  "main": "index.js",
   "scripts": {
     "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
-    "start:dev": "nodemon server,js",
-    "start:prod": "node server.js",
-    "install": "npm run seed",
+    "start:dev": "nodemon server.js",
+     "start:prod": "node server.js",
+    "install":"npm run seed",
     "seed": "node seeders/seed.js",
-    "heroku_postbuild": "npm run seed"
+     "heroku-postbuild": "npm run build"
   },
-  "author": "Walter Marikwa",
-  "license": "MIT",
+  "author": "",
+  "license": "ISC",
   "dependencies": {
+    "nodemon":"*",
     "dotenv": "^8.2.0",
     "express": "^4.16.4",
+    "glob": "^7.1.4",
+    "mlab": "^1.0.30-beta",
     "mongoose": "^5.5.8"
-  },
-  "devDependencies": {
-    "nodemon": "^2.0.1"
   }
 }
